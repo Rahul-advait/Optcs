@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Test">
+    <test name="Milestone 1" preserve-order="true">
+        <classes>
+            <class name="org.testclasses.VerifyRegisterFeature">
+<!--                <methods>-->
+<!--                    <include name="verifyLogin"/>-->
+<!--                </methods>-->
+                <!--            <class name="org.testclasses.VerifyUpcomingconferencepage"/>-->
+            </class>
+        </classes>
+    </test>
+</suite>
