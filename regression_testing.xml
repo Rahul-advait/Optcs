@@ -5,7 +5,8 @@
         <classes>
             <class name="org.testclasses.VerifyRegisterFeature">
 <!--                <methods>-->
-<!--                    <include name="verifyLogin"/>-->
+<!--                    <include name="verifyDomainField"/>-->
+<!--                    <include name="verifyEmailField"/>-->
 <!--                </methods>-->
                 <!--            <class name="org.testclasses.VerifyUpcomingconferencepage"/>-->
             </class>

@@ -26,6 +26,7 @@ public class BasePage extends CustomDriver {
 
         while (System.currentTimeMillis() < endTime) {
             if (driver.getCurrentUrl().contains(url)) {
+                log.info("Current url: " + driver.getCurrentUrl());
                 return true;
             }
             try {
@@ -36,7 +37,7 @@ public class BasePage extends CustomDriver {
                 log.error(e.getMessage());
             }
         }
-
+        log.info("Current url: " + driver.getCurrentUrl());
         log.error("Timeout exceeded. Expected URL to contain: " + url);
         return false;
     }

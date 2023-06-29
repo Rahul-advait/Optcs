@@ -235,6 +235,7 @@ public class CustomDriver {
         try {
             if (clear) {
                 element.clear();
+                log.info("Element is cleared");
             }
 //            Util.sleep(1000, "Waiting Before Entering Data");
             element.sendKeys(data);

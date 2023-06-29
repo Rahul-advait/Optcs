@@ -48,15 +48,15 @@ public class RegisterPage extends BasePage {
     }
 
     public void registerAccountEmptyField(String emptyField) {
-        String name = Constants.DEFAULT_NAME;
-        String email = Constants.DEFAULT_EMAIL;
-        String password = Constants.DEFAULT_PASSWORD;
-        String confirmPassword = Constants.DEFAULT_PASSWORD;
-        String companyName = Constants.COMPANY_NAME;
-        String workEmail = Constants.DEFAULT_WORK_EMAIL;
-        String totalEmployees = Constants.TOTAL_EMP;
-        String domainSector = Constants.COMPANY_DOMAIN;
-        String username = Constants.DEFAULT_USERNAME;
+        String name = Constants.getDefaultName();
+        String email = Constants.getDefaultEmail();
+        String password = Constants.getDefaultPassword();
+        String confirmPassword = password;
+        String companyName = Constants.getCompanyName();
+        String workEmail = Constants.getDefaultWorkEmail();
+        String totalEmployees = Constants.getTotalEmp();
+        String domainSector = Constants.getCompanyDomain();
+        String username = Constants.getDefaultUsername();
 
         switch (emptyField.toLowerCase()) {
             case "name" -> name = "";
@@ -65,7 +65,7 @@ public class RegisterPage extends BasePage {
             case "confirm password" -> confirmPassword = "";
             case "company name" -> companyName = "";
             case "work email" -> workEmail = "";
-            case "total exp" -> totalEmployees = "";
+            case "total emp" -> totalEmployees = "";
             case "company domain" -> domainSector = "";
             case "username" -> username = "";
             case "" -> log.info("No Field should be empty");
