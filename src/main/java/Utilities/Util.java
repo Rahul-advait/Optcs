@@ -4,11 +4,16 @@ import com.google.common.collect.Ordering;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WindowType;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v111.network.Network;
+import org.openqa.selenium.devtools.v111.network.model.RequestId;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 public class Util {
     private static final Logger log = LogManager.getLogger(Util.class.getName());

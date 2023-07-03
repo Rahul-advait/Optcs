@@ -41,6 +41,31 @@ public class BasePage extends CustomDriver {
         log.error("Timeout exceeded. Expected URL to contain: " + url);
         return false;
     }
+
+    public boolean isExactlyOpen(String url) {
+        log.info("Checking to see if current url is equals to " + url);
+
+        long timeoutInSeconds = 10;
+        long pollingIntervalInMilliseconds = 500;
+        long endTime = System.currentTimeMillis() + timeoutInSeconds * 1000;
+
+        while (System.currentTimeMillis() < endTime) {
+            if (driver.getCurrentUrl().equalsIgnoreCase(url)) {
+                log.info("Current url: " + driver.getCurrentUrl());
+                return true;
+            }
+            try {
+                Thread.sleep(pollingIntervalInMilliseconds);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                log.error("Thread Intercepted");
+                log.error(e.getMessage());
+            }
+        }
+        log.info("Current url: " + driver.getCurrentUrl());
+        log.error("Timeout exceeded. Expected URL to contain: " + url);
+        return false;
+    }
 }
 
 

@@ -14,6 +14,10 @@ public class Constants {
     public static final String GECKO_DRIVER_VALUE = "geckodriver";
     public static final String CHROME_DRIVER_VALUE = "chromedriver";
     public static final String IE_DRIVER_VALUE = "IEDriverServer";
+    public static final String VALID_EMAIL = "rahulsingh@yopmail.com";
+    public static final String VALID_PASSWORD = "1@RahulSingh";
+    public static final String INVALID_PASSWORD = "Test@123";
+    public static final String INVALID_EMAIL = "rahulsingh123123@yopmail.com";
 
     public static String getDefaultName() {
         return RandomData.generateRandomName(10);

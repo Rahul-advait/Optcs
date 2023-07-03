@@ -11,6 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+
 public class BaseClassTest {
     protected static final Logger log = LogManager.getLogger(CustomDriver.class.getName());
     public WebDriver driver;
@@ -22,16 +23,11 @@ public class BaseClassTest {
     public void beforeSetUp() {
         driver = WebDriverFactory.getInstance().getDriver("chrome");
         String baseURL = Constants.BASE_URL;
+        NetworkDevTools networkDevTools = new NetworkDevTools(driver);
+        networkDevTools.getNetworkResponse();
         driver.get(baseURL);
         header = new HomePageHeader(driver);
-        registerPage = header.clickRegisterBtn();
     }
-
-    @BeforeMethod
-    public void methodSetUp() {
-        CheckPoint.clearHashMap();
-    }
-
     @AfterClass
     public void tearDown() {
         WebDriverFactory.getInstance().quitDriver();

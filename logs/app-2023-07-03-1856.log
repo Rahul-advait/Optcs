@@ -1,0 +1,42 @@
+18:54:16.411 INFO  base.WebDriverFactory -OS name from system property: win
+18:54:22.534 INFO  Base.CustomDriver -LOGIN btn, found with link=>Login
+18:54:22.778 INFO  Base.CustomDriver -Clicked on::LOGIN btn
+18:54:22.803 INFO  base.CheckPoint -Clearing Results Hash Map
+18:54:22.878 INFO  Base.CustomDriver -Email Address, found with cssSelector=>input#email
+18:54:23.035 INFO  Base.CustomDriver -Element is cleared
+18:54:23.370 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: rahulsingh@yopmail.com
+18:54:23.398 INFO  Base.CustomDriver -Password, found with cssSelector=>input#password
+18:54:23.444 INFO  Base.CustomDriver -Element is cleared
+18:54:23.603 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: 1@RahulSingh
+18:54:23.629 INFO  Base.CustomDriver -Remember Btn, found with cssSelector=>.checkmark
+18:54:23.694 INFO  Base.CustomDriver -Clicked on::Remember Btn
+18:54:23.719 INFO  Base.CustomDriver -Login Btn, found with cssSelector=>form .login_btn
+18:54:23.811 INFO  Utilities.Util -Waiting 0.01 seconds :: Clicked on ::Login Btn
+18:54:25.318 INFO  Base.CustomDriver -lOGIN ALERT, found with cssSelector=>div[role='alert'] > div
+18:54:25.378 INFO  Base.CustomDriver -Profile icon, found with cssSelector=>[alt='avtar']
+18:54:25.391 INFO  Base.CustomDriver -Waiting for max:: 20 seconds for element to be invisible lOGIN ALERT
+18:54:31.897 INFO  Base.CustomDriver -Element is clickable on the web page
+18:54:32.193 INFO  Base.CustomDriver -Clicked on element
+18:54:32.213 INFO  Base.CustomDriver -Sign out Btn, found with cssSelector=>.dropdown-menu.show > a:nth-of-type(4)
+18:54:32.216 INFO  Base.CustomDriver -Waiting for max:: 10 seconds for element to be clickable Sign out Btn
+18:54:32.239 INFO  Base.CustomDriver -Element is clickable on the web page
+18:54:32.322 INFO  Base.CustomDriver -Clicked on element
+18:54:32.886 INFO  Base.CustomDriver -LOGIN btn, found with link=>Login
+18:54:33.950 ERROR Base.CustomDriver -Cannot click on ::LOGIN btn
+18:54:33.951 ERROR Base.CustomDriver -element click intercepted: Element <a class="nav-link login" href="/login">...</a> is not clickable at point (1190, 41). Other element would receive the click: <div>...</div>
+  (Session info: chrome=114.0.5735.199)
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [909d170bf3d19ef0617d43416bd929f2, clickElement {id=54BE778CF5A084B4EC612BF402EAFCE9_element_65}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ITECHN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54448}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54448/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (909d170bf3d19ef0617d43416bd929f2)] -> link text: Login]
+Session ID: 909d170bf3d19ef0617d43416bd929f2
+18:54:33.956 INFO  Utilities.Util -Date and Time :: 07_03_2023 18_54_33
+18:54:34.460 INFO  Base.CustomDriver -Screen Shot Was Stored at: C:\Users\iTechnolabs 06\Documents\Optcs//test-output/screenshots//_Click ERROR_07_03_2023 18_54_33.png
+18:54:37.485 ERROR Base.CustomDriver -Element not found with cssSelector=>input#email
+18:54:37.487 ERROR Base.CustomDriver -Cannot send keys on element :: Email Address with data :: email
+18:54:40.655 ERROR Base.CustomDriver -Element not found with cssSelector=>input#password
+18:54:40.656 ERROR Base.CustomDriver -Cannot send keys on element :: Password with data :: password
+18:54:43.875 ERROR Base.CustomDriver -Element not found with cssSelector=>input#email
+18:54:43.890 INFO  Base.CustomDriver ---------------------

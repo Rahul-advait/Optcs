@@ -3,11 +3,11 @@
 <suite name="Regression Test">
     <test name="Milestone 1" preserve-order="true">
         <classes>
-            <class name="org.testclasses.VerifyRegisterFeature">
-<!--                <methods>-->
-<!--                    <include name="verifyDomainField"/>-->
-<!--                    <include name="verifyEmailField"/>-->
-<!--                </methods>-->
+            <class name="org.testclasses.CompanyDashLogin">
+                <methods>
+<!--                    <include name="invalidEmail"/>-->
+                    <include name="rememberMe"/>
+                </methods>
                 <!--            <class name="org.testclasses.VerifyUpcomingconferencepage"/>-->
             </class>
         </classes>

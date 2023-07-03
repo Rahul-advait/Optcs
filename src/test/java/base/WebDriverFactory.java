@@ -107,8 +107,12 @@ public class WebDriverFactory {
         options.setExperimentalOption("prefs", prefs);
 //        options.addArguments("--incognito");
         options.addArguments("--disable-notifications");
+
         return options;
     }
+
+
+
 
     private FirefoxOptions setFFOptions() {
         FirefoxOptions options = new FirefoxOptions();
@@ -127,4 +131,6 @@ public class WebDriverFactory {
                 INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
         return options;
     }
+
+
 }

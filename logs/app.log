@@ -1,362 +1,45 @@
-19:09:12.527 INFO  base.WebDriverFactory -OS name from system property: win
-19:09:17.677 INFO  Base.CustomDriver -Register btn, found with link=>Register
-19:09:17.915 INFO  Base.CustomDriver -Clicked on::Register btn
-19:09:17.952 INFO  base.CheckPoint -Clearing Results Hash Map
-19:09:17.981 INFO  Base.CustomDriver -No Field should be empty
-19:09:18.051 INFO  Base.CustomDriver -Name, found with id=>name
-19:09:18.246 INFO  Base.CustomDriver -Element is cleared
-19:09:18.433 INFO  Base.CustomDriver -Send Keys on element :: Name with data :: JrtxM DntQf
-19:09:18.454 INFO  Base.CustomDriver -Email Address, found with id=>email
-19:09:18.498 INFO  Base.CustomDriver -Element is cleared
-19:09:18.687 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: IZEzODITxs@yopmail.com
-19:09:18.724 INFO  Base.CustomDriver -Password, found with id=>password
-19:09:18.771 INFO  Base.CustomDriver -Element is cleared
-19:09:18.951 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: HAoASmOx6X^5
-19:09:18.973 INFO  Base.CustomDriver -Confirm Password, found with id=>password_confirmation
-19:09:19.018 INFO  Base.CustomDriver -Element is cleared
-19:09:19.189 INFO  Base.CustomDriver -Send Keys on element :: Confirm Password with data :: HAoASmOx6X^5
-19:09:19.209 INFO  Base.CustomDriver -Company Name, found with id=>company_name
-19:09:19.252 INFO  Base.CustomDriver -Element is cleared
-19:09:19.408 INFO  Base.CustomDriver -Send Keys on element :: Company Name with data :: aBZOph yEgOnr
-19:09:19.437 INFO  Base.CustomDriver -Work Email, found with id=>work_email
-19:09:19.509 INFO  Base.CustomDriver -Element is cleared
-19:09:19.766 INFO  Base.CustomDriver -Send Keys on element :: Work Email with data :: tLmnlEFiMs.work@mailinator.com
-19:09:19.787 INFO  Base.CustomDriver -Total Employees, found with id=>total_emp
-19:09:19.839 INFO  Base.CustomDriver -Element is cleared
-19:09:19.945 INFO  Base.CustomDriver -Send Keys on element :: Total Employees with data :: 632
-19:09:19.991 INFO  Base.CustomDriver -Domain Sector, found with id=>domain_sector
-19:09:20.055 INFO  Base.CustomDriver -Element is cleared
-19:09:20.207 INFO  Base.CustomDriver -Send Keys on element :: Domain Sector with data :: VblFq HOswN
-19:09:20.227 INFO  Base.CustomDriver -Username, found with id=>username
-19:09:20.274 INFO  Base.CustomDriver -Element is cleared
-19:09:20.388 INFO  Base.CustomDriver -Send Keys on element :: Username with data :: AUXMbqwW
-19:09:20.409 INFO  Base.CustomDriver -CREATE_ACCOUNT btn, found with cssSelector=>form .login_btn
-19:09:20.424 INFO  Base.CustomDriver -Scrolled on :: CREATE_ACCOUNT btn
-19:09:20.441 INFO  Base.CustomDriver -Create Account btn, found with cssSelector=>form .login_btn
-19:09:20.474 INFO  Base.CustomDriver -Clicked on :: Create Account btn
-19:09:20.474 INFO  Base.CustomDriver -Checking to see if current url contains register-success
-19:09:22.152 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/register-success
-19:09:22.167 INFO  Base.CustomDriver ---------------------
-19:09:22.684 INFO  base.CheckPoint -Clearing Results Hash Map
-19:09:22.704 INFO  Base.CustomDriver -Name, found with id=>name
-19:09:22.748 INFO  Base.CustomDriver -Element is cleared
-19:09:22.873 INFO  Base.CustomDriver -Send Keys on element :: Name with data :: dGYOf LzznR
-19:09:22.897 INFO  Base.CustomDriver -Email Address, found with id=>email
-19:09:22.937 INFO  Base.CustomDriver -Element is cleared
-19:09:23.112 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: LjtlHldWhg@yopmail.com
-19:09:23.123 INFO  Base.CustomDriver -Password, found with id=>password
-19:09:23.167 INFO  Base.CustomDriver -Element is cleared
-19:09:23.306 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: Lz&UnY4gbLEY
-19:09:23.323 INFO  Base.CustomDriver -Confirm Password, found with id=>password_confirmation
-19:09:23.369 INFO  Base.CustomDriver -Element is cleared
-19:09:23.531 INFO  Base.CustomDriver -Send Keys on element :: Confirm Password with data :: Lz&UnY4gbLEY
-19:09:23.548 INFO  Base.CustomDriver -Company Name, found with id=>company_name
-19:09:23.588 INFO  Base.CustomDriver -Element is cleared
-19:09:23.656 INFO  Base.CustomDriver -Send Keys on element :: Company Name with data :: 
-19:09:23.673 INFO  Base.CustomDriver -Work Email, found with id=>work_email
-19:09:23.719 INFO  Base.CustomDriver -Element is cleared
-19:09:23.893 INFO  Base.CustomDriver -Send Keys on element :: Work Email with data :: MSolpSTgfj.work@maildrop.cc
-19:09:23.917 INFO  Base.CustomDriver -Total Employees, found with id=>total_emp
-19:09:23.983 INFO  Base.CustomDriver -Element is cleared
-19:09:24.053 INFO  Base.CustomDriver -Send Keys on element :: Total Employees with data :: 757
-19:09:24.069 INFO  Base.CustomDriver -Domain Sector, found with id=>domain_sector
-19:09:24.108 INFO  Base.CustomDriver -Element is cleared
-19:09:24.217 INFO  Base.CustomDriver -Send Keys on element :: Domain Sector with data :: kymLh XRKOQ
-19:09:24.233 INFO  Base.CustomDriver -Username, found with id=>username
-19:09:24.271 INFO  Base.CustomDriver -Element is cleared
-19:09:24.391 INFO  Base.CustomDriver -Send Keys on element :: Username with data :: OiEZcgvb
-19:09:24.406 INFO  Base.CustomDriver -CREATE_ACCOUNT btn, found with cssSelector=>form .login_btn
-19:09:24.418 INFO  Base.CustomDriver -Scrolled on :: CREATE_ACCOUNT btn
-19:09:24.427 INFO  Base.CustomDriver -Create Account btn, found with cssSelector=>form .login_btn
-19:09:24.453 INFO  Base.CustomDriver -Clicked on :: Create Account btn
-19:09:24.453 INFO  Base.CustomDriver -Checking to see if current url contains register-success
-19:09:34.797 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/register
-19:09:34.803 ERROR Base.CustomDriver -Timeout exceeded. Expected URL to contain: register-success
-19:09:34.804 INFO  Base.CustomDriver ---------------------
-19:09:35.063 INFO  base.CheckPoint -Clearing Results Hash Map
-19:09:35.107 INFO  Base.CustomDriver -Name, found with id=>name
-19:09:35.145 INFO  Base.CustomDriver -Element is cleared
-19:09:35.278 INFO  Base.CustomDriver -Send Keys on element :: Name with data :: atYjC KKKJl
-19:09:35.294 INFO  Base.CustomDriver -Email Address, found with id=>email
-19:09:35.328 INFO  Base.CustomDriver -Element is cleared
-19:09:35.514 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: XgtvEkGplc@yopmail.com
-19:09:35.533 INFO  Base.CustomDriver -Password, found with id=>password
-19:09:35.566 INFO  Base.CustomDriver -Element is cleared
-19:09:35.698 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: @lY(9gM52gnW
-19:09:35.713 INFO  Base.CustomDriver -Confirm Password, found with id=>password_confirmation
-19:09:35.748 INFO  Base.CustomDriver -Element is cleared
-19:09:35.809 INFO  Base.CustomDriver -Send Keys on element :: Confirm Password with data :: 
-19:09:35.826 INFO  Base.CustomDriver -Company Name, found with id=>company_name
-19:09:35.858 INFO  Base.CustomDriver -Element is cleared
-19:09:35.982 INFO  Base.CustomDriver -Send Keys on element :: Company Name with data :: LraKlo jrRdPH
-19:09:35.997 INFO  Base.CustomDriver -Work Email, found with id=>work_email
-19:09:36.033 INFO  Base.CustomDriver -Element is cleared
-19:09:36.215 INFO  Base.CustomDriver -Send Keys on element :: Work Email with data :: ehVfKyUuZH.work@yopmail.com
-19:09:36.228 INFO  Base.CustomDriver -Total Employees, found with id=>total_emp
-19:09:36.275 INFO  Base.CustomDriver -Element is cleared
-19:09:36.347 INFO  Base.CustomDriver -Send Keys on element :: Total Employees with data :: 226
-19:09:36.363 INFO  Base.CustomDriver -Domain Sector, found with id=>domain_sector
-19:09:36.402 INFO  Base.CustomDriver -Element is cleared
-19:09:36.542 INFO  Base.CustomDriver -Send Keys on element :: Domain Sector with data :: jBOCU mlgsT
-19:09:36.562 INFO  Base.CustomDriver -Username, found with id=>username
-19:09:36.602 INFO  Base.CustomDriver -Element is cleared
-19:09:36.744 INFO  Base.CustomDriver -Send Keys on element :: Username with data :: MjZLVOol
-19:09:36.763 INFO  Base.CustomDriver -CREATE_ACCOUNT btn, found with cssSelector=>form .login_btn
-19:09:36.770 INFO  Base.CustomDriver -Scrolled on :: CREATE_ACCOUNT btn
-19:09:36.784 INFO  Base.CustomDriver -Create Account btn, found with cssSelector=>form .login_btn
-19:09:36.803 INFO  Base.CustomDriver -Clicked on :: Create Account btn
-19:09:36.804 INFO  Base.CustomDriver -Checking to see if current url contains register-success
-19:09:46.980 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/register
-19:09:46.980 ERROR Base.CustomDriver -Timeout exceeded. Expected URL to contain: register-success
-19:09:46.983 INFO  Base.CustomDriver ---------------------
-19:09:47.271 INFO  base.CheckPoint -Clearing Results Hash Map
-19:09:47.405 INFO  Base.CustomDriver -Name, found with id=>name
-19:09:47.450 INFO  Base.CustomDriver -Element is cleared
-19:09:47.587 INFO  Base.CustomDriver -Send Keys on element :: Name with data :: YImhW XDCec
-19:09:47.621 INFO  Base.CustomDriver -Email Address, found with id=>email
-19:09:47.668 INFO  Base.CustomDriver -Element is cleared
-19:09:47.836 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: xaDfEriaRd@maildrop.cc
-19:09:47.849 INFO  Base.CustomDriver -Password, found with id=>password
-19:09:47.887 INFO  Base.CustomDriver -Element is cleared
-19:09:48.023 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: Tbj%18!&Qu*Q
-19:09:48.043 INFO  Base.CustomDriver -Confirm Password, found with id=>password_confirmation
-19:09:48.085 INFO  Base.CustomDriver -Element is cleared
-19:09:48.220 INFO  Base.CustomDriver -Send Keys on element :: Confirm Password with data :: Tbj%18!&Qu*Q
-19:09:48.234 INFO  Base.CustomDriver -Company Name, found with id=>company_name
-19:09:48.269 INFO  Base.CustomDriver -Element is cleared
-19:09:48.399 INFO  Base.CustomDriver -Send Keys on element :: Company Name with data :: zWqlyP ZflSBs
-19:09:48.408 INFO  Base.CustomDriver -Work Email, found with id=>work_email
-19:09:48.442 INFO  Base.CustomDriver -Element is cleared
-19:09:48.618 INFO  Base.CustomDriver -Send Keys on element :: Work Email with data :: pRmYbafPwN.work@yopmail.com
-19:09:48.637 INFO  Base.CustomDriver -Total Employees, found with id=>total_emp
-19:09:48.679 INFO  Base.CustomDriver -Element is cleared
-19:09:48.744 INFO  Base.CustomDriver -Send Keys on element :: Total Employees with data :: 781
-19:09:48.760 INFO  Base.CustomDriver -Domain Sector, found with id=>domain_sector
-19:09:48.805 INFO  Base.CustomDriver -Element is cleared
-19:09:48.873 INFO  Base.CustomDriver -Send Keys on element :: Domain Sector with data :: 
-19:09:48.887 INFO  Base.CustomDriver -Username, found with id=>username
-19:09:48.923 INFO  Base.CustomDriver -Element is cleared
-19:09:49.044 INFO  Base.CustomDriver -Send Keys on element :: Username with data :: beqFiWfc
-19:09:49.059 INFO  Base.CustomDriver -CREATE_ACCOUNT btn, found with cssSelector=>form .login_btn
-19:09:49.073 INFO  Base.CustomDriver -Scrolled on :: CREATE_ACCOUNT btn
-19:09:49.086 INFO  Base.CustomDriver -Create Account btn, found with cssSelector=>form .login_btn
-19:09:49.125 INFO  Base.CustomDriver -Clicked on :: Create Account btn
-19:09:49.125 INFO  Base.CustomDriver -Checking to see if current url contains register-success
-19:09:59.482 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/register
-19:09:59.482 ERROR Base.CustomDriver -Timeout exceeded. Expected URL to contain: register-success
-19:09:59.483 INFO  Base.CustomDriver ---------------------
-19:09:59.699 INFO  base.CheckPoint -Clearing Results Hash Map
-19:09:59.764 INFO  Base.CustomDriver -Name, found with id=>name
-19:09:59.801 INFO  Base.CustomDriver -Element is cleared
-19:09:59.916 INFO  Base.CustomDriver -Send Keys on element :: Name with data :: tNnvD oTsWA
-19:09:59.933 INFO  Base.CustomDriver -Email Address, found with id=>email
-19:09:59.977 INFO  Base.CustomDriver -Element is cleared
-19:10:00.051 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: 
-19:10:00.068 INFO  Base.CustomDriver -Password, found with id=>password
-19:10:00.109 INFO  Base.CustomDriver -Element is cleared
-19:10:00.227 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: sN2)hly9CzQS
-19:10:00.242 INFO  Base.CustomDriver -Confirm Password, found with id=>password_confirmation
-19:10:00.279 INFO  Base.CustomDriver -Element is cleared
-19:10:00.400 INFO  Base.CustomDriver -Send Keys on element :: Confirm Password with data :: sN2)hly9CzQS
-19:10:00.412 INFO  Base.CustomDriver -Company Name, found with id=>company_name
-19:10:00.445 INFO  Base.CustomDriver -Element is cleared
-19:10:00.578 INFO  Base.CustomDriver -Send Keys on element :: Company Name with data :: rDMiDs UFNgpP
-19:10:00.585 INFO  Base.CustomDriver -Work Email, found with id=>work_email
-19:10:00.619 INFO  Base.CustomDriver -Element is cleared
-19:10:00.788 INFO  Base.CustomDriver -Send Keys on element :: Work Email with data :: cQNjSIddfR.work@maildrop.cc
-19:10:00.800 INFO  Base.CustomDriver -Total Employees, found with id=>total_emp
-19:10:00.837 INFO  Base.CustomDriver -Element is cleared
-19:10:00.909 INFO  Base.CustomDriver -Send Keys on element :: Total Employees with data :: 80
-19:10:00.921 INFO  Base.CustomDriver -Domain Sector, found with id=>domain_sector
-19:10:00.986 INFO  Base.CustomDriver -Element is cleared
-19:10:01.111 INFO  Base.CustomDriver -Send Keys on element :: Domain Sector with data :: sUcxi PdKhr
-19:10:01.120 INFO  Base.CustomDriver -Username, found with id=>username
-19:10:01.155 INFO  Base.CustomDriver -Element is cleared
-19:10:01.284 INFO  Base.CustomDriver -Send Keys on element :: Username with data :: vsXedxBP
-19:10:01.298 INFO  Base.CustomDriver -CREATE_ACCOUNT btn, found with cssSelector=>form .login_btn
-19:10:01.304 INFO  Base.CustomDriver -Scrolled on :: CREATE_ACCOUNT btn
-19:10:01.316 INFO  Base.CustomDriver -Create Account btn, found with cssSelector=>form .login_btn
-19:10:01.333 INFO  Base.CustomDriver -Clicked on :: Create Account btn
-19:10:01.333 INFO  Base.CustomDriver -Checking to see if current url contains register-success
-19:10:11.683 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/register
-19:10:11.683 ERROR Base.CustomDriver -Timeout exceeded. Expected URL to contain: register-success
-19:10:11.684 INFO  Base.CustomDriver ---------------------
-19:10:11.909 INFO  base.CheckPoint -Clearing Results Hash Map
-19:10:11.955 INFO  Base.CustomDriver -Name, found with id=>name
-19:10:12.008 INFO  Base.CustomDriver -Element is cleared
-19:10:12.065 INFO  Base.CustomDriver -Send Keys on element :: Name with data :: 
-19:10:12.101 INFO  Base.CustomDriver -Email Address, found with id=>email
-19:10:12.139 INFO  Base.CustomDriver -Element is cleared
-19:10:12.327 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: bFPnidzRDC@yopmail.com
-19:10:12.345 INFO  Base.CustomDriver -Password, found with id=>password
-19:10:12.387 INFO  Base.CustomDriver -Element is cleared
-19:10:12.495 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: gyu9Ij@7KL53
-19:10:12.511 INFO  Base.CustomDriver -Confirm Password, found with id=>password_confirmation
-19:10:12.545 INFO  Base.CustomDriver -Element is cleared
-19:10:12.671 INFO  Base.CustomDriver -Send Keys on element :: Confirm Password with data :: gyu9Ij@7KL53
-19:10:12.684 INFO  Base.CustomDriver -Company Name, found with id=>company_name
-19:10:12.712 INFO  Base.CustomDriver -Element is cleared
-19:10:12.829 INFO  Base.CustomDriver -Send Keys on element :: Company Name with data :: zYficy isxxKZ
-19:10:12.843 INFO  Base.CustomDriver -Work Email, found with id=>work_email
-19:10:12.876 INFO  Base.CustomDriver -Element is cleared
-19:10:13.040 INFO  Base.CustomDriver -Send Keys on element :: Work Email with data :: OuRvxaokGi.work@mailinator.com
-19:10:13.056 INFO  Base.CustomDriver -Total Employees, found with id=>total_emp
-19:10:13.102 INFO  Base.CustomDriver -Element is cleared
-19:10:13.161 INFO  Base.CustomDriver -Send Keys on element :: Total Employees with data :: 626
-19:10:13.177 INFO  Base.CustomDriver -Domain Sector, found with id=>domain_sector
-19:10:13.240 INFO  Base.CustomDriver -Element is cleared
-19:10:13.358 INFO  Base.CustomDriver -Send Keys on element :: Domain Sector with data :: MhFDV gGcfG
-19:10:13.375 INFO  Base.CustomDriver -Username, found with id=>username
-19:10:13.414 INFO  Base.CustomDriver -Element is cleared
-19:10:13.531 INFO  Base.CustomDriver -Send Keys on element :: Username with data :: IdHQlfaX
-19:10:13.548 INFO  Base.CustomDriver -CREATE_ACCOUNT btn, found with cssSelector=>form .login_btn
-19:10:13.560 INFO  Base.CustomDriver -Scrolled on :: CREATE_ACCOUNT btn
-19:10:13.574 INFO  Base.CustomDriver -Create Account btn, found with cssSelector=>form .login_btn
-19:10:13.591 INFO  Base.CustomDriver -Clicked on :: Create Account btn
-19:10:13.591 INFO  Base.CustomDriver -Checking to see if current url contains register-success
-19:10:23.958 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/register
-19:10:23.958 ERROR Base.CustomDriver -Timeout exceeded. Expected URL to contain: register-success
-19:10:23.958 INFO  Base.CustomDriver ---------------------
-19:10:24.229 INFO  base.CheckPoint -Clearing Results Hash Map
-19:10:24.270 INFO  Base.CustomDriver -Name, found with id=>name
-19:10:24.312 INFO  Base.CustomDriver -Element is cleared
-19:10:24.430 INFO  Base.CustomDriver -Send Keys on element :: Name with data :: OQTPh EvyWR
-19:10:24.445 INFO  Base.CustomDriver -Email Address, found with id=>email
-19:10:24.480 INFO  Base.CustomDriver -Element is cleared
-19:10:24.661 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: UgUWgAYypJ@mailinator.com
-19:10:24.669 INFO  Base.CustomDriver -Password, found with id=>password
-19:10:24.702 INFO  Base.CustomDriver -Element is cleared
-19:10:24.752 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: 
-19:10:24.767 INFO  Base.CustomDriver -Confirm Password, found with id=>password_confirmation
-19:10:24.802 INFO  Base.CustomDriver -Element is cleared
-19:10:24.949 INFO  Base.CustomDriver -Send Keys on element :: Confirm Password with data :: p3)f&*&jABD@
-19:10:24.963 INFO  Base.CustomDriver -Company Name, found with id=>company_name
-19:10:24.995 INFO  Base.CustomDriver -Element is cleared
-19:10:25.131 INFO  Base.CustomDriver -Send Keys on element :: Company Name with data :: TjuTVO LJyfCL
-19:10:25.145 INFO  Base.CustomDriver -Work Email, found with id=>work_email
-19:10:25.177 INFO  Base.CustomDriver -Element is cleared
-19:10:25.353 INFO  Base.CustomDriver -Send Keys on element :: Work Email with data :: iuQMuvaHBf.work@mailinator.com
-19:10:25.365 INFO  Base.CustomDriver -Total Employees, found with id=>total_emp
-19:10:25.401 INFO  Base.CustomDriver -Element is cleared
-19:10:25.467 INFO  Base.CustomDriver -Send Keys on element :: Total Employees with data :: 679
-19:10:25.484 INFO  Base.CustomDriver -Domain Sector, found with id=>domain_sector
-19:10:25.518 INFO  Base.CustomDriver -Element is cleared
-19:10:25.652 INFO  Base.CustomDriver -Send Keys on element :: Domain Sector with data :: UKwiz OJcMS
-19:10:25.666 INFO  Base.CustomDriver -Username, found with id=>username
-19:10:25.724 INFO  Base.CustomDriver -Element is cleared
-19:10:25.856 INFO  Base.CustomDriver -Send Keys on element :: Username with data :: DThDLJRS
-19:10:25.872 INFO  Base.CustomDriver -CREATE_ACCOUNT btn, found with cssSelector=>form .login_btn
-19:10:25.885 INFO  Base.CustomDriver -Scrolled on :: CREATE_ACCOUNT btn
-19:10:25.898 INFO  Base.CustomDriver -Create Account btn, found with cssSelector=>form .login_btn
-19:10:25.917 INFO  Base.CustomDriver -Clicked on :: Create Account btn
-19:10:25.917 INFO  Base.CustomDriver -Checking to see if current url contains register-success
-19:10:36.238 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/register
-19:10:36.238 ERROR Base.CustomDriver -Timeout exceeded. Expected URL to contain: register-success
-19:10:36.239 INFO  Base.CustomDriver ---------------------
-19:10:36.508 INFO  base.CheckPoint -Clearing Results Hash Map
-19:10:36.541 INFO  Base.CustomDriver -Name, found with id=>name
-19:10:36.578 INFO  Base.CustomDriver -Element is cleared
-19:10:36.719 INFO  Base.CustomDriver -Send Keys on element :: Name with data :: UVpgp pGCWC
-19:10:36.729 INFO  Base.CustomDriver -Email Address, found with id=>email
-19:10:36.794 INFO  Base.CustomDriver -Element is cleared
-19:10:36.994 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: QrPSWLyIyR@mailinator.com
-19:10:37.007 INFO  Base.CustomDriver -Password, found with id=>password
-19:10:37.040 INFO  Base.CustomDriver -Element is cleared
-19:10:37.191 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: ORyUHuAI54@%
-19:10:37.208 INFO  Base.CustomDriver -Confirm Password, found with id=>password_confirmation
-19:10:37.243 INFO  Base.CustomDriver -Element is cleared
-19:10:37.373 INFO  Base.CustomDriver -Send Keys on element :: Confirm Password with data :: ORyUHuAI54@%
-19:10:37.388 INFO  Base.CustomDriver -Company Name, found with id=>company_name
-19:10:37.420 INFO  Base.CustomDriver -Element is cleared
-19:10:37.543 INFO  Base.CustomDriver -Send Keys on element :: Company Name with data :: JoyttK diDWln
-19:10:37.557 INFO  Base.CustomDriver -Work Email, found with id=>work_email
-19:10:37.589 INFO  Base.CustomDriver -Element is cleared
-19:10:37.789 INFO  Base.CustomDriver -Send Keys on element :: Work Email with data :: srSZcNuJvR.work@mailinator.com
-19:10:37.798 INFO  Base.CustomDriver -Total Employees, found with id=>total_emp
-19:10:37.855 INFO  Base.CustomDriver -Element is cleared
-19:10:37.899 INFO  Base.CustomDriver -Send Keys on element :: Total Employees with data :: 
-19:10:37.914 INFO  Base.CustomDriver -Domain Sector, found with id=>domain_sector
-19:10:37.978 INFO  Base.CustomDriver -Element is cleared
-19:10:38.133 INFO  Base.CustomDriver -Send Keys on element :: Domain Sector with data :: lBDxs wLiwZ
-19:10:38.148 INFO  Base.CustomDriver -Username, found with id=>username
-19:10:38.180 INFO  Base.CustomDriver -Element is cleared
-19:10:38.293 INFO  Base.CustomDriver -Send Keys on element :: Username with data :: RrtLoqXr
-19:10:38.300 INFO  Base.CustomDriver -CREATE_ACCOUNT btn, found with cssSelector=>form .login_btn
-19:10:38.311 INFO  Base.CustomDriver -Scrolled on :: CREATE_ACCOUNT btn
-19:10:38.317 INFO  Base.CustomDriver -Create Account btn, found with cssSelector=>form .login_btn
-19:10:38.332 INFO  Base.CustomDriver -Clicked on :: Create Account btn
-19:10:38.333 INFO  Base.CustomDriver -Checking to see if current url contains register-success
-19:10:39.883 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/register-success
-19:10:39.920 INFO  Base.CustomDriver ---------------------
-19:10:40.402 INFO  base.CheckPoint -Clearing Results Hash Map
-19:10:40.420 INFO  Base.CustomDriver -Name, found with id=>name
-19:10:40.500 INFO  Base.CustomDriver -Element is cleared
-19:10:40.620 INFO  Base.CustomDriver -Send Keys on element :: Name with data :: SJpxo intEK
-19:10:40.634 INFO  Base.CustomDriver -Email Address, found with id=>email
-19:10:40.673 INFO  Base.CustomDriver -Element is cleared
-19:10:40.859 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: TfZCeFmjdW@maildrop.cc
-19:10:40.873 INFO  Base.CustomDriver -Password, found with id=>password
-19:10:40.903 INFO  Base.CustomDriver -Element is cleared
-19:10:41.022 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: rs90YsY&y5!k
-19:10:41.037 INFO  Base.CustomDriver -Confirm Password, found with id=>password_confirmation
-19:10:41.071 INFO  Base.CustomDriver -Element is cleared
-19:10:41.226 INFO  Base.CustomDriver -Send Keys on element :: Confirm Password with data :: rs90YsY&y5!k
-19:10:41.239 INFO  Base.CustomDriver -Company Name, found with id=>company_name
-19:10:41.273 INFO  Base.CustomDriver -Element is cleared
-19:10:41.406 INFO  Base.CustomDriver -Send Keys on element :: Company Name with data :: bCHjkA VWLMhX
-19:10:41.418 INFO  Base.CustomDriver -Work Email, found with id=>work_email
-19:10:41.446 INFO  Base.CustomDriver -Element is cleared
-19:10:41.644 INFO  Base.CustomDriver -Send Keys on element :: Work Email with data :: UBiVlIkBED.work@mailinator.com
-19:10:41.659 INFO  Base.CustomDriver -Total Employees, found with id=>total_emp
-19:10:41.705 INFO  Base.CustomDriver -Element is cleared
-19:10:41.775 INFO  Base.CustomDriver -Send Keys on element :: Total Employees with data :: 782
-19:10:41.793 INFO  Base.CustomDriver -Domain Sector, found with id=>domain_sector
-19:10:41.829 INFO  Base.CustomDriver -Element is cleared
-19:10:41.955 INFO  Base.CustomDriver -Send Keys on element :: Domain Sector with data :: fBtye YmyZZ
-19:10:41.992 INFO  Base.CustomDriver -Username, found with id=>username
-19:10:42.052 INFO  Base.CustomDriver -Element is cleared
-19:10:42.114 INFO  Base.CustomDriver -Send Keys on element :: Username with data :: 
-19:10:42.131 INFO  Base.CustomDriver -CREATE_ACCOUNT btn, found with cssSelector=>form .login_btn
-19:10:42.142 INFO  Base.CustomDriver -Scrolled on :: CREATE_ACCOUNT btn
-19:10:42.155 INFO  Base.CustomDriver -Create Account btn, found with cssSelector=>form .login_btn
-19:10:42.176 INFO  Base.CustomDriver -Clicked on :: Create Account btn
-19:10:42.176 INFO  Base.CustomDriver -Checking to see if current url contains register-success
-19:10:52.498 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/register
-19:10:52.498 ERROR Base.CustomDriver -Timeout exceeded. Expected URL to contain: register-success
-19:10:52.500 INFO  Base.CustomDriver ---------------------
-19:10:52.759 INFO  base.CheckPoint -Clearing Results Hash Map
-19:10:52.810 INFO  Base.CustomDriver -Name, found with id=>name
-19:10:52.845 INFO  Base.CustomDriver -Element is cleared
-19:10:52.980 INFO  Base.CustomDriver -Send Keys on element :: Name with data :: IdPQx EnEMb
-19:10:52.995 INFO  Base.CustomDriver -Email Address, found with id=>email
-19:10:53.034 INFO  Base.CustomDriver -Element is cleared
-19:10:53.210 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: bStDagLZFg@yopmail.com
-19:10:53.228 INFO  Base.CustomDriver -Password, found with id=>password
-19:10:53.261 INFO  Base.CustomDriver -Element is cleared
-19:10:53.385 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: f&Z2m0C#XWO%
-19:10:53.400 INFO  Base.CustomDriver -Confirm Password, found with id=>password_confirmation
-19:10:53.447 INFO  Base.CustomDriver -Element is cleared
-19:10:53.583 INFO  Base.CustomDriver -Send Keys on element :: Confirm Password with data :: f&Z2m0C#XWO%
-19:10:53.596 INFO  Base.CustomDriver -Company Name, found with id=>company_name
-19:10:53.631 INFO  Base.CustomDriver -Element is cleared
-19:10:53.753 INFO  Base.CustomDriver -Send Keys on element :: Company Name with data :: snHXLD LmgRpL
-19:10:53.767 INFO  Base.CustomDriver -Work Email, found with id=>work_email
-19:10:53.804 INFO  Base.CustomDriver -Element is cleared
-19:10:53.867 INFO  Base.CustomDriver -Send Keys on element :: Work Email with data :: 
-19:10:53.880 INFO  Base.CustomDriver -Total Employees, found with id=>total_emp
-19:10:53.935 INFO  Base.CustomDriver -Element is cleared
-19:10:54.015 INFO  Base.CustomDriver -Send Keys on element :: Total Employees with data :: 35
-19:10:54.028 INFO  Base.CustomDriver -Domain Sector, found with id=>domain_sector
-19:10:54.089 INFO  Base.CustomDriver -Element is cleared
-19:10:54.239 INFO  Base.CustomDriver -Send Keys on element :: Domain Sector with data :: VwNbQ sYFTb
-19:10:54.255 INFO  Base.CustomDriver -Username, found with id=>username
-19:10:54.291 INFO  Base.CustomDriver -Element is cleared
-19:10:54.421 INFO  Base.CustomDriver -Send Keys on element :: Username with data :: jSaFHdqF
-19:10:54.448 INFO  Base.CustomDriver -CREATE_ACCOUNT btn, found with cssSelector=>form .login_btn
-19:10:54.458 INFO  Base.CustomDriver -Scrolled on :: CREATE_ACCOUNT btn
-19:10:54.473 INFO  Base.CustomDriver -Create Account btn, found with cssSelector=>form .login_btn
-19:10:54.489 INFO  Base.CustomDriver -Clicked on :: Create Account btn
-19:10:54.489 INFO  Base.CustomDriver -Checking to see if current url contains register-success
-19:11:04.851 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/register
-19:11:04.852 ERROR Base.CustomDriver -Timeout exceeded. Expected URL to contain: register-success
-19:11:04.853 INFO  Base.CustomDriver ---------------------
+19:00:17.294 INFO  base.WebDriverFactory -OS name from system property: win
+19:00:33.182 ERROR Base.CustomDriver -Element not found with cssSelector=>.Toastify__toast-body div
+19:00:33.203 INFO  Base.CustomDriver -LOGIN btn, found with link=>Login
+19:00:33.386 INFO  Base.CustomDriver -Clicked on::LOGIN btn
+19:00:33.410 INFO  base.CheckPoint -Clearing Results Hash Map
+19:00:33.665 INFO  Base.CustomDriver -Email Address, found with cssSelector=>input#email
+19:00:33.728 INFO  Base.CustomDriver -Element is cleared
+19:00:33.909 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: rahulsingh@yopmail.com
+19:00:33.959 INFO  Base.CustomDriver -Password, found with cssSelector=>input#password
+19:00:34.004 INFO  Base.CustomDriver -Element is cleared
+19:00:34.172 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: 1@RahulSingh
+19:00:34.193 INFO  Base.CustomDriver -Remember Btn, found with cssSelector=>.checkmark
+19:00:34.268 INFO  Base.CustomDriver -Clicked on::Remember Btn
+19:00:34.291 INFO  Base.CustomDriver -Login Btn, found with cssSelector=>form .login_btn
+19:00:34.396 INFO  Utilities.Util -Waiting 0.01 seconds :: Clicked on ::Login Btn
+19:00:35.648 INFO  Base.CustomDriver -lOGIN ALERT, found with cssSelector=>div[role='alert'] > div
+19:00:35.705 INFO  Base.CustomDriver -Profile icon, found with cssSelector=>[alt='avtar']
+19:00:35.716 INFO  Base.CustomDriver -Waiting for max:: 20 seconds for element to be invisible lOGIN ALERT
+19:00:41.821 INFO  Base.CustomDriver -Element is clickable on the web page
+19:00:42.387 INFO  Base.CustomDriver -Clicked on element
+19:00:42.437 INFO  Base.CustomDriver -Sign out Btn, found with cssSelector=>.dropdown-menu.show > a:nth-of-type(4)
+19:00:42.443 INFO  Base.CustomDriver -Waiting for max:: 10 seconds for element to be clickable Sign out Btn
+19:00:42.473 INFO  Base.CustomDriver -Element is clickable on the web page
+19:00:42.566 INFO  Base.CustomDriver -Clicked on element
+19:00:42.921 INFO  Base.CustomDriver -Logout Successfull, found with cssSelector=>.Toastify__toast-body div
+19:00:42.942 INFO  Base.CustomDriver -Element :: Logout Successfull is NOT displayed
+19:00:42.958 INFO  Base.CustomDriver -LOGIN btn, found with link=>Login
+19:00:44.023 ERROR Base.CustomDriver -Cannot click on ::LOGIN btn
+19:00:44.023 ERROR Base.CustomDriver -element click intercepted: Element <a class="nav-link login" href="/login">...</a> is not clickable at point (1190, 41). Other element would receive the click: <div>...</div>
+  (Session info: chrome=114.0.5735.199)
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0a589dceceb8148b476da59edb58026f, clickElement {id=BD7184EF5DEA25E7D5DB8F9914CF801E_element_65}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ITECHN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54702}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54702/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0a589dceceb8148b476da59edb58026f)] -> link text: Login]
+Session ID: 0a589dceceb8148b476da59edb58026f
+19:00:44.024 INFO  Utilities.Util -Date and Time :: 07_03_2023 19_00_44
+19:00:44.418 INFO  Base.CustomDriver -Screen Shot Was Stored at: C:\Users\iTechnolabs 06\Documents\Optcs//test-output/screenshots//_Click ERROR_07_03_2023 19_00_44.png
+19:00:47.440 ERROR Base.CustomDriver -Element not found with cssSelector=>input#email
+19:00:47.442 ERROR Base.CustomDriver -Cannot send keys on element :: Email Address with data :: email
+19:00:50.468 ERROR Base.CustomDriver -Element not found with cssSelector=>input#password
+19:00:50.481 ERROR Base.CustomDriver -Cannot send keys on element :: Password with data :: password
+19:00:53.510 ERROR Base.CustomDriver -Element not found with cssSelector=>input#email
+19:00:53.525 INFO  Base.CustomDriver ---------------------

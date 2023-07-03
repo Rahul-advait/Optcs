@@ -7,6 +7,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v111.network.Network;
+import org.openqa.selenium.devtools.v111.network.model.RequestId;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -18,6 +22,7 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
 public class CustomDriver {
@@ -29,7 +34,6 @@ public class CustomDriver {
         this.driver = driver;
         js = (JavascriptExecutor) driver;
     }
-
 
     public void closeCurrentOpenNew(String page) {
         String originalWindow = driver.getWindowHandle();
@@ -130,10 +134,10 @@ public class CustomDriver {
         List<WebElement> elementList = getElementList(locator, info);
         int size = elementList.size();
         if (size > 0) {
-            log.info(info + "Element is present");
+            log.info(info + " Element is present");
             return true;
         } else {
-            log.info(info + "Element is not present");
+            log.info(info + " Element is not present");
             return false;
         }
     }
@@ -229,7 +233,6 @@ public class CustomDriver {
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         }
     }
-
 
     public void sendData(WebElement element, String data, String info, Boolean clear) {
         try {
@@ -415,6 +418,28 @@ public class CustomDriver {
         }
         return element;
     }
+    public WebElement waitDisappearAndClick(String disappearanceOflocator, int timeout, String dInfo, String locator, String locatorInfo) {
+        WebElement overlappingElement = null, element = null;
+        overlappingElement = getElement(disappearanceOflocator, dInfo);
+        element = getElement(locator, locatorInfo);
+        try {
+            driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+            log.info("Waiting for max:: " + timeout + " seconds for element to be invisible " + dInfo);
+
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+            wait.until(
+                    ExpectedConditions.invisibilityOf(overlappingElement));
+            log.info("Element is clickable on the web page");
+            element.click();
+            log.info("Clicked on element");
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        } catch (Exception e) {
+            log.error("Unable to click  " + locatorInfo);
+            log.error(e.getMessage());
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        }
+        return element;
+    }
 
     public void mouseHover(String locator, String info) {
         WebElement element = getElement(locator, info);
@@ -514,6 +539,7 @@ public class CustomDriver {
             huc.setRequestMethod("HEAD");
             huc.connect();
             responseCode = huc.getResponseCode();
+
             if (responseCode >= 400) {
                 log.error("The URL " + url + " is a broken link. Response code: " + responseCode + " " + linkText);
             } else {
@@ -522,5 +548,35 @@ public class CustomDriver {
         } catch (Exception e) {
             log.error("Exception occured while getting connecting with url");
         }
+    }
+
+    public void getNetworkResponse(){
+        DevTools devTools = ((ChromeDriver) driver).getDevTools();
+        devTools.createSession();
+        devTools.send(Network.enable(Optional.empty(),
+                Optional.empty(), Optional.of(100000000)));
+        final RequestId[] requestIds = new RequestId[1];
+        devTools.addListener(Network.requestWillBeSent(), request -> {
+            String requestMethod = request.getRequest().getMethod();
+            if (requestMethod.equalsIgnoreCase("post")) {
+                System.out.println("Request URL : " + request.getRequest().getUrl());
+                requestIds[0] = request.getRequestId();
+                String requestBody = devTools.send(Network.getRequestPostData(requestIds[0])).toString();
+                System.out.println("Request Body " + requestBody);
+            }
+        });
+        devTools.addListener(Network.responseReceived(), responseReceived -> {
+            requestIds[0] = responseReceived.getRequestId();
+            String url = responseReceived.getResponse().getUrl();
+            if (url.contains("register")) {
+                System.out.println("Response url : " + url);
+                int status = responseReceived.getResponse().getStatus();
+                System.out.println("Response status : " + status);
+                String type = responseReceived.getType().toJson();
+                String responseBody = devTools.send(Network.getResponseBody(requestIds[0])).getBody();
+                System.out.println("Response body : " + responseBody);
+            }
+        });
+
     }
 }
