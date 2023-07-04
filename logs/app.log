@@ -1,45 +1,75 @@
-19:00:17.294 INFO  base.WebDriverFactory -OS name from system property: win
-19:00:33.182 ERROR Base.CustomDriver -Element not found with cssSelector=>.Toastify__toast-body div
-19:00:33.203 INFO  Base.CustomDriver -LOGIN btn, found with link=>Login
-19:00:33.386 INFO  Base.CustomDriver -Clicked on::LOGIN btn
-19:00:33.410 INFO  base.CheckPoint -Clearing Results Hash Map
-19:00:33.665 INFO  Base.CustomDriver -Email Address, found with cssSelector=>input#email
-19:00:33.728 INFO  Base.CustomDriver -Element is cleared
-19:00:33.909 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: rahulsingh@yopmail.com
-19:00:33.959 INFO  Base.CustomDriver -Password, found with cssSelector=>input#password
-19:00:34.004 INFO  Base.CustomDriver -Element is cleared
-19:00:34.172 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: 1@RahulSingh
-19:00:34.193 INFO  Base.CustomDriver -Remember Btn, found with cssSelector=>.checkmark
-19:00:34.268 INFO  Base.CustomDriver -Clicked on::Remember Btn
-19:00:34.291 INFO  Base.CustomDriver -Login Btn, found with cssSelector=>form .login_btn
-19:00:34.396 INFO  Utilities.Util -Waiting 0.01 seconds :: Clicked on ::Login Btn
-19:00:35.648 INFO  Base.CustomDriver -lOGIN ALERT, found with cssSelector=>div[role='alert'] > div
-19:00:35.705 INFO  Base.CustomDriver -Profile icon, found with cssSelector=>[alt='avtar']
-19:00:35.716 INFO  Base.CustomDriver -Waiting for max:: 20 seconds for element to be invisible lOGIN ALERT
-19:00:41.821 INFO  Base.CustomDriver -Element is clickable on the web page
-19:00:42.387 INFO  Base.CustomDriver -Clicked on element
-19:00:42.437 INFO  Base.CustomDriver -Sign out Btn, found with cssSelector=>.dropdown-menu.show > a:nth-of-type(4)
-19:00:42.443 INFO  Base.CustomDriver -Waiting for max:: 10 seconds for element to be clickable Sign out Btn
-19:00:42.473 INFO  Base.CustomDriver -Element is clickable on the web page
-19:00:42.566 INFO  Base.CustomDriver -Clicked on element
-19:00:42.921 INFO  Base.CustomDriver -Logout Successfull, found with cssSelector=>.Toastify__toast-body div
-19:00:42.942 INFO  Base.CustomDriver -Element :: Logout Successfull is NOT displayed
-19:00:42.958 INFO  Base.CustomDriver -LOGIN btn, found with link=>Login
-19:00:44.023 ERROR Base.CustomDriver -Cannot click on ::LOGIN btn
-19:00:44.023 ERROR Base.CustomDriver -element click intercepted: Element <a class="nav-link login" href="/login">...</a> is not clickable at point (1190, 41). Other element would receive the click: <div>...</div>
-  (Session info: chrome=114.0.5735.199)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0a589dceceb8148b476da59edb58026f, clickElement {id=BD7184EF5DEA25E7D5DB8F9914CF801E_element_65}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ITECHN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54702}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54702/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (0a589dceceb8148b476da59edb58026f)] -> link text: Login]
-Session ID: 0a589dceceb8148b476da59edb58026f
-19:00:44.024 INFO  Utilities.Util -Date and Time :: 07_03_2023 19_00_44
-19:00:44.418 INFO  Base.CustomDriver -Screen Shot Was Stored at: C:\Users\iTechnolabs 06\Documents\Optcs//test-output/screenshots//_Click ERROR_07_03_2023 19_00_44.png
-19:00:47.440 ERROR Base.CustomDriver -Element not found with cssSelector=>input#email
-19:00:47.442 ERROR Base.CustomDriver -Cannot send keys on element :: Email Address with data :: email
-19:00:50.468 ERROR Base.CustomDriver -Element not found with cssSelector=>input#password
-19:00:50.481 ERROR Base.CustomDriver -Cannot send keys on element :: Password with data :: password
-19:00:53.510 ERROR Base.CustomDriver -Element not found with cssSelector=>input#email
-19:00:53.525 INFO  Base.CustomDriver ---------------------
+19:03:05.588 INFO  Base.CustomDriver -Element is invisible
+19:03:05.610 INFO  Base.CustomDriver -Waiting for element to be clickable
+19:03:05.937 INFO  Base.CustomDriver -Clicked on element
+19:03:05.975 INFO  Base.CustomDriver -Sign out Btn, found with cssSelector=>.dropdown-menu.show > a:nth-of-type(4)
+19:03:05.993 INFO  Base.CustomDriver -Waiting for max:: 20 seconds for element to be clickable Sign out Btn
+19:03:06.022 INFO  Base.CustomDriver -Sign out Btn is clickable on the web page
+19:03:06.083 INFO  Base.CustomDriver -Clicked on Sign out Btn
+19:03:06.089 INFO  Base.CustomDriver -Waiting for max:: 5 seconds for element to be available
+19:03:07.203 INFO  Base.CustomDriver -Element appeared on the web page
+19:03:07.205 INFO  Base.CustomDriver -ALERT is present
+19:03:07.220 INFO  Base.CustomDriver -true
+19:03:07.220 INFO  Base.CustomDriver -Alert is displayed
+19:03:07.232 INFO  Base.CustomDriver -Alert, found with cssSelector=>.Toastify__toast-body div
+19:03:07.248 INFO  Base.CustomDriver -LOGIN Btn, found with link=>Login
+19:03:07.251 INFO  Base.CustomDriver -Waiting for max:: 20 seconds for element to be invisible Alert
+19:03:12.685 INFO  Base.CustomDriver -Element is invisible
+19:03:12.685 INFO  Base.CustomDriver -Waiting for element to be clickable
+19:03:13.111 INFO  Base.CustomDriver -Clicked on element
+19:03:13.140 INFO  Base.CustomDriver -info, found with cssSelector=>input#email
+19:03:13.158 ERROR Utilities.Util -Actual Text From Web Application UI   --> : 
+19:03:13.158 ERROR Utilities.Util -Expected Text From Web Application UI --> : rahulsingh@yopmail.com
+19:03:13.158 ERROR Utilities.Util -### Verification DOES NOT MATCH !!!
+19:03:13.158 INFO  Base.CustomDriver -Attribute found in email field false
+19:03:13.172 INFO  Base.CustomDriver -info, found with cssSelector=>input#password
+19:03:13.189 ERROR Utilities.Util -Actual Text From Web Application UI   --> : 
+19:03:13.189 ERROR Utilities.Util -Expected Text From Web Application UI --> : 1@RahulSingh
+19:03:13.189 ERROR Utilities.Util -### Verification DOES NOT MATCH !!!
+19:03:13.189 INFO  Base.CustomDriver -Attribute found in email field false
+19:03:13.212 INFO  Base.CustomDriver ---------------------------------------------------
+19:03:13.246 INFO  base.CheckPoint -Clearing Results Hash Map
+19:03:13.274 INFO  Base.CustomDriver -Email Address, found with cssSelector=>input#email
+19:03:13.319 INFO  Base.CustomDriver -Element is cleared
+19:03:13.647 INFO  Base.CustomDriver -Send Keys on element :: Email Address with data :: rahulsingh@yopmail.com
+19:03:13.661 INFO  Base.CustomDriver -Password, found with cssSelector=>input#password
+19:03:13.696 INFO  Base.CustomDriver -Element is cleared
+19:03:13.906 INFO  Base.CustomDriver -Send Keys on element :: Password with data :: 1@RahulSingh
+19:03:13.923 INFO  Base.CustomDriver -Login Btn, found with cssSelector=>form .login_btn
+19:03:13.976 INFO  Utilities.Util -Waiting 0.01 seconds :: Clicked on ::Login Btn
+19:03:13.991 INFO  Base.CustomDriver -Checking to see if current url contains overview
+19:03:14.531 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/overview
+19:03:14.532 INFO  Base.CustomDriver ---------------------------------------------------
+19:03:14.995 INFO  base.CheckPoint -Clearing Results Hash Map
+19:03:15.029 INFO  Base.CustomDriver -forgot password, found with link=>Forgot your password?
+19:03:15.321 INFO  Utilities.Util -Waiting 0.01 seconds :: Clicked on ::forgot password
+19:03:15.334 INFO  Base.CustomDriver -Checking to see if current url contains forgot-password
+19:03:15.349 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/forgot-password
+19:03:15.350 INFO  base.CheckPoint -verify forgot pass link.Is forgot pass link working :-> PASS
+19:03:15.367 INFO  Base.CustomDriver -Valid Email Address, found with cssSelector=>input#email
+19:03:15.403 INFO  Base.CustomDriver -Element is cleared
+19:03:15.521 INFO  Base.CustomDriver -Send Keys on element :: Valid Email Address with data :: rahulsingh@yopmail.com
+19:03:15.536 INFO  Base.CustomDriver -Submit Btn, found with cssSelector=>.login_btn
+19:03:15.605 INFO  Base.CustomDriver -Clicked on::Submit Btn
+19:03:15.619 INFO  Base.CustomDriver -Waiting for max:: 10 seconds for element to be available
+19:03:17.291 INFO  Base.CustomDriver -Element appeared on the web page
+19:03:17.318 INFO  Utilities.Util -Actual Text From Web Application UI   --> : Reset password link has been sent to your email-id
+19:03:17.318 INFO  Utilities.Util -Expected Text From Web Application UI --> : Reset password link has been sent to your email-id
+19:03:17.318 INFO  Utilities.Util -### Verification MATCHED !!!
+19:03:17.319 INFO  Base.CustomDriver ---------------------------------------------------
+19:03:17.570 INFO  base.CheckPoint -Clearing Results Hash Map
+19:03:17.613 INFO  Base.CustomDriver -forgot password, found with link=>Forgot your password?
+19:03:17.862 INFO  Utilities.Util -Waiting 0.01 seconds :: Clicked on ::forgot password
+19:03:17.876 INFO  Base.CustomDriver -Checking to see if current url contains forgot-password
+19:03:17.890 INFO  Base.CustomDriver -Current url: https://optcs-frontend.itechnolabs.tech/forgot-password
+19:03:17.890 INFO  base.CheckPoint -verify forgot pass link.Is forgot pass link working :-> PASS
+19:03:17.904 INFO  Base.CustomDriver -Valid Email Address, found with cssSelector=>input#email
+19:03:17.931 INFO  Base.CustomDriver -Element is cleared
+19:03:18.082 INFO  Base.CustomDriver -Send Keys on element :: Valid Email Address with data :: rahulsingh123123@yopmail.com
+19:03:18.102 INFO  Base.CustomDriver -Submit Btn, found with cssSelector=>.login_btn
+19:03:18.182 INFO  Base.CustomDriver -Clicked on::Submit Btn
+19:03:18.191 INFO  Base.CustomDriver -Waiting for max:: 10 seconds for element to be available
+19:03:18.776 INFO  Base.CustomDriver -Element appeared on the web page
+19:03:18.789 INFO  Utilities.Util -Actual Text From Web Application UI   --> : Email Id is not registered
+19:03:18.790 INFO  Utilities.Util -Expected Text From Web Application UI --> : Email Id is not registered
+19:03:18.790 INFO  Utilities.Util -### Verification MATCHED !!!
+19:03:18.790 INFO  Base.CustomDriver ---------------------------------------------------

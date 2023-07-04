@@ -1,7 +1,9 @@
 package org.testclasses;
 
+import PageClasses.ForgotPassword;
 import PageClasses.LoginPage;
 import PageClasses.Overview;
+import Utilities.Constants;
 import base.BaseClassTest;
 import base.CheckPoint;
 import org.testng.Assert;
@@ -11,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class CompanyDashLogin extends BaseClassTest {
+    ForgotPassword forgotPasswordPage;
     LoginPage loginPage;
     Overview overview;
 
@@ -28,14 +31,17 @@ public class CompanyDashLogin extends BaseClassTest {
 
     @AfterMethod
     public void setUpRegister() {
-        log.info("-".repeat(20));
+        log.info("-".repeat(50));
+        if (!driver.getCurrentUrl().contains("login")){
+            driver.navigate().to(Constants.BASE_URL+"login");
+        }
     }
 
     @Test
     public void validLogin() {
         overview = loginPage.login();
         boolean isLogin = overview.isOpen();
-        Assert.assertTrue(isLogin);
+        Assert.assertTrue(isLogin, "Verify if user is logged in");
     }
 
     @Test
@@ -65,7 +71,28 @@ public class CompanyDashLogin extends BaseClassTest {
         overview = loginPage.login(true);
         header = overview.logout();
         loginPage = header.clickLoginBtn();
-        loginPage.checkAttributes();
+        boolean verifyPrefilled = loginPage.checkAttributes();
+        Assert.assertTrue(verifyPrefilled, "Verify prefilled email and password");
+    }
+
+    @Test
+    public void verifyForgotPass() {
+        forgotPasswordPage = loginPage.clickForgotPasLink();
+        boolean isForgotPageOpen = forgotPasswordPage.isOpen();
+        CheckPoint.mark("Verify forgot pass link",
+                isForgotPageOpen, "Is forgot pass link working");
+        boolean isSuccessNotification = forgotPasswordPage.enterValidEmail();
+        Assert.assertTrue(isSuccessNotification);
+    }
+
+    @Test
+    public void verifyForgotPassInvalidEmail() {
+        forgotPasswordPage = loginPage.clickForgotPasLink();
+        boolean isForgotPageOpen = forgotPasswordPage.isOpen();
+        CheckPoint.mark("Verify forgot pass link",
+                isForgotPageOpen, "Is forgot pass link working");
+        boolean isErrorNotification = forgotPasswordPage.enterInvalidEmail();
+        Assert.assertTrue(isErrorNotification);
     }
 
 }

@@ -407,9 +407,9 @@ public class CustomDriver {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
             wait.until(
                     ExpectedConditions.elementToBeClickable(element));
-            log.info("Element is clickable on the web page");
+            log.info(info + " is clickable on the web page");
             element.click();
-            log.info("Clicked on element");
+            log.info("Clicked on " + info);
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         } catch (Exception e) {
             log.error("Unable to click  " + info);
@@ -418,6 +418,7 @@ public class CustomDriver {
         }
         return element;
     }
+
     public WebElement waitDisappearAndClick(String disappearanceOflocator, int timeout, String dInfo, String locator, String locatorInfo) {
         WebElement overlappingElement = null, element = null;
         overlappingElement = getElement(disappearanceOflocator, dInfo);
@@ -429,7 +430,9 @@ public class CustomDriver {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
             wait.until(
                     ExpectedConditions.invisibilityOf(overlappingElement));
-            log.info("Element is clickable on the web page");
+            log.info("Element is invisible");
+            log.info("Waiting for element to be clickable");
+            wait.until(ExpectedConditions.elementToBeClickable(element));
             element.click();
             log.info("Clicked on element");
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -550,7 +553,7 @@ public class CustomDriver {
         }
     }
 
-    public void getNetworkResponse(){
+    public void getNetworkResponse() {
         DevTools devTools = ((ChromeDriver) driver).getDevTools();
         devTools.createSession();
         devTools.send(Network.enable(Optional.empty(),

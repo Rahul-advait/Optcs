@@ -21,7 +21,7 @@ public class Overview extends BasePage {
 
     public HomePageHeader logout() {
         waitDisappearAndClick(LOGIN_ALERT, 20, "lOGIN ALERT", PROFILE, "Profile icon");
-        waitAndClick(SIGN_OUT, 10, "Sign out Btn");
+        waitAndClick(SIGN_OUT, 20, "Sign out Btn");
         return new HomePageHeader(driver);
     }
 }

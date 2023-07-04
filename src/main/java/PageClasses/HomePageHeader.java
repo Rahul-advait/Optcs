@@ -1,6 +1,7 @@
 package PageClasses;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class HomePageHeader extends HomePage {
     protected WebDriver driver;
@@ -14,11 +15,25 @@ public class HomePageHeader extends HomePage {
         this.driver = driver;
     }
 
+    public LoginPage clickLoginBtn1() {
+        elementClick(LOGIN, "LOGIN btn");
+        return new LoginPage(driver);
+    }
+
     public LoginPage clickLoginBtn() {
-        if (isDisplayed(ALERT, "Logout Successfull")) {
-            waitDisappearAndClick(ALERT, 20, "Logout successfully alert", LOGIN, "LOGIN BTN");
-        } else {
-            elementClick(LOGIN, "LOGIN btn");
+        WebElement element = null;
+        try {
+            element = waitForElement(ALERT, 5);
+            log.info("ALERT is present");
+            boolean flag = element.isDisplayed();
+            log.info(flag);
+            if (flag) {
+                log.info("Alert is displayed");
+                waitDisappearAndClick(ALERT, 20, "Alert", LOGIN, "LOGIN Btn");
+            }
+        } catch (Exception e) {
+            log.info("Exception occured");
+            elementClick(LOGIN, "Login");
         }
         return new LoginPage(driver);
     }

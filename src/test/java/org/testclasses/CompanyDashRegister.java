@@ -24,7 +24,7 @@ public class CompanyDashRegister extends BaseClassTest {
 
     @AfterMethod
     public void setUpRegister() {
-        log.info("-".repeat(20));
+        log.info("-".repeat(50));
         if (!driver.getCurrentUrl().endsWith("register")) {
             driver.navigate().back();
         }

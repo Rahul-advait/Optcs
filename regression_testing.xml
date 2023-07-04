@@ -4,10 +4,10 @@
     <test name="Milestone 1" preserve-order="true">
         <classes>
             <class name="org.testclasses.CompanyDashLogin">
-                <methods>
-<!--                    <include name="invalidEmail"/>-->
-                    <include name="rememberMe"/>
-                </methods>
+<!--                <methods>-->
+<!--                    <include name="verifyForgotPassInvalidEmail"/>-->
+<!--                    <include name="verifyForgotPass"/>-->
+<!--                </methods>-->
                 <!--            <class name="org.testclasses.VerifyUpcomingconferencepage"/>-->
             </class>
         </classes>

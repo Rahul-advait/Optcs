@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
+    private String FORGOT_PASS = "link=>Forgot your password?";
     protected WebDriver driver;
     private String EMAIL = "cssSelector=>input#email";
     private String PASSWORD = "cssSelector=>input#password";
@@ -30,7 +31,6 @@ public class LoginPage extends BasePage {
         sendData(PASSWORD, password, "Password", true);
         if (checkRememberMe) {
             elementClick(REMEMBER_BTN, "Remember Btn");
-
         }
         elementClick(LOGIN_BTN, "Login Btn", 10);
         return new Overview(driver);
@@ -67,13 +67,21 @@ public class LoginPage extends BasePage {
                 Util.verifyTextMatch(alertMessage, expAlertMessage);
     }
 
-    public void checkAttributes() {
-        sendData(EMAIL, "email", "Email Address", true);
-        sendData(PASSWORD, "password", "Password", true);
+    public boolean checkAttributes() {
         String email = getElementAttributeValue(EMAIL, "value");
+        boolean verifyEmail = Util.verifyTextMatch(email, Constants.VALID_EMAIL);
+        log.info("Attribute found in email field " + verifyEmail);
+
         String pass = getElementAttributeValue(PASSWORD, "value");
-        System.out.println(email + " : " + pass);
+        boolean verifyPass = Util.verifyTextMatch(email, Constants.VALID_PASSWORD);
+        log.info("Attribute found in email field " + verifyPass);
+
+        return verifyEmail && verifyPass;
     }
 
 
+    public ForgotPassword clickForgotPasLink() {
+        elementClick(FORGOT_PASS, "forgot password", 10);
+        return new ForgotPassword(driver);
+    }
 }
