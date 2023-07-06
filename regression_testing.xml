@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Regression Test">
-    <test name="Milestone 1" preserve-order="true">
+    <test name="Milestone 1" preserve-order="true" parallel="classes" thread-count="2">
         <classes>
-            <class name="org.testclasses.CompanyDashLogin">
+            <class name="org.testclasses.CompanyDashLogin"/>
 <!--                <methods>-->
 <!--                    <include name="verifyForgotPassInvalidEmail"/>-->
 <!--                    <include name="verifyForgotPass"/>-->
 <!--                </methods>-->
-                <!--            <class name="org.testclasses.VerifyUpcomingconferencepage"/>-->
-            </class>
+                            <class name="org.testclasses.CompanyDashRegister"/>
+<!--            </class>-->
         </classes>
     </test>
 </suite>

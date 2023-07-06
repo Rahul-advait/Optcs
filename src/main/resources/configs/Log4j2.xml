@@ -7,7 +7,7 @@
         <RollingFile name="File" fileName="${basePath}/app.log"
                      filePattern="${basePath}/app-%d{yyyy-MM-dd-HHmm}.log">
             <PatternLayout
-                    pattern="%highlight{%d{HH:mm:ss.SSS} %-5level %c{2} -%msg%n}{FATAL=bg_red, ERROR=yellow, WARN=yellow, INFO=grey, SUCCESS=green}"/>
+                    pattern="%highlight{%d{HH:mm:ss.SSS} %-5level %c{2} -%msg%n}{FATAL=bg_red, ERROR=yellow, WARN=yellow, INFO=grey, SUCCESS=green}" />
             <DefaultRolloverStrategy max="1"/>
                         <Policies>
                             <TimeBasedTriggeringPolicy modulate="true" interval="3"/>

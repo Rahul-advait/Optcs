@@ -35,7 +35,7 @@ public class CustomDriver {
         js = (JavascriptExecutor) driver;
     }
 
-    public void closeCurrentOpenNew(String page) {
+    protected void closeCurrentOpenNew(String page) {
         String originalWindow = driver.getWindowHandle();
         log.info("Originally in " + originalWindow);
         driver.switchTo().newWindow(WindowType.TAB);
@@ -52,28 +52,28 @@ public class CustomDriver {
         log.info("Entered this URL : " + Constants.BASE_URL + page);
     }
 
-    public void refresh() {
+    protected void refresh() {
         driver.navigate().refresh();
         log.info("The current browser location was refreshed");
     }
 
-    public void navigateBrowserBack() {
+    protected void navigateBrowserBack() {
         driver.navigate().back();
         log.info("Navigate Back");
     }
 
-    public void navigateBrowserForward() {
+    protected void navigateBrowserForward() {
         driver.navigate().forward();
         log.info("Navigate Forward");
     }
 
-    public String getTitle() {
+    protected String getTitle() {
         String title = driver.getTitle();
         log.info("The title of the page is: " + title);
         return title;
     }
 
-    public By getByType(@NotNull String locator) {
+    protected By getByType(@NotNull String locator) {
         By by = null;
         String locatorType = locator.split("=>")[0];
         locator = locator.split("=>")[1];
@@ -104,7 +104,7 @@ public class CustomDriver {
         return by;
     }
 
-    public WebElement getElement(String locator, String info) {
+    protected WebElement getElement(String locator, String info) {
         WebElement element = null;
         By byType = getByType(locator);
         try {
@@ -117,7 +117,7 @@ public class CustomDriver {
         return element;
     }
 
-    public List<WebElement> getElementList(String locator, String info) {
+    protected List<WebElement> getElementList(String locator, String info) {
         List<WebElement> elementList = new ArrayList<WebElement>();
         By byType = getByType(locator);
         try {
@@ -130,7 +130,7 @@ public class CustomDriver {
         return elementList;
     }
 
-    public boolean isElementPresent(String locator, String info) {
+    protected boolean isElementPresent(String locator, String info) {
         List<WebElement> elementList = getElementList(locator, info);
         int size = elementList.size();
         if (size > 0) {
@@ -142,7 +142,7 @@ public class CustomDriver {
         }
     }
 
-    public void elementClick(WebElement element, String info, long timeToWait) {
+    protected void elementClick(WebElement element, String info, long timeToWait) {
         try {
             element.click();
             if (timeToWait == 0) {
@@ -158,21 +158,21 @@ public class CustomDriver {
         }
     }
 
-    public void elementClick(WebElement element, String info) {
+    protected void elementClick(WebElement element, String info) {
         elementClick(element, info, 0);
     }
 
-    public void elementClick(String locator, String info, long timeToWait) {
+    protected void elementClick(String locator, String info, long timeToWait) {
         WebElement element = getElement(locator, info);
         elementClick(element, info, timeToWait);
     }
 
-    public void elementClick(String locator, String info) {
+    protected void elementClick(String locator, String info) {
         WebElement element = getElement(locator, info);
         elementClick(element, info, 0);
     }
 
-    public void javascriptClick(String locator, String info) {
+    protected void javascriptClick(String locator, String info) {
         WebElement element = getElement(locator, info);
         try {
             js.executeScript("arguments[0].click();", element);
@@ -182,7 +182,16 @@ public class CustomDriver {
         }
     }
 
-    public void javascriptScrollToView(String locator, String info) {
+    protected void javascriptClick(WebElement element, String info) {
+        try {
+            js.executeScript("arguments[0].click();", element);
+            log.info("Clicked on :: " + info);
+        } catch (Exception e) {
+            log.error("Cannot click on :: " + info);
+        }
+    }
+
+    protected void javascriptScrollToView(String locator, String info) {
         WebElement element = getElement(locator, info);
         try {
             js.executeScript("arguments[0].scrollIntoView();", element);
@@ -192,7 +201,7 @@ public class CustomDriver {
         }
     }
 
-    public void clickWhenReady(String locator, int timeout) {
+    protected void clickWhenReady(String locator, int timeout) {
         try {
             driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
             WebElement element = null;
@@ -212,7 +221,7 @@ public class CustomDriver {
         }
     }
 
-    public void clickPopClose(String locator, int timeout, String info) {
+    protected void clickPopClose(String locator, int timeout, String info) {
         try {
             driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
             WebElement element = null;
@@ -234,7 +243,7 @@ public class CustomDriver {
         }
     }
 
-    public void sendData(WebElement element, String data, String info, Boolean clear) {
+    protected void sendData(WebElement element, String data, String info, Boolean clear) {
         try {
             if (clear) {
                 element.clear();
@@ -250,21 +259,21 @@ public class CustomDriver {
         }
     }
 
-    public void sendData(String locator, String data, String info, Boolean clear) {
+    protected void sendData(String locator, String data, String info, Boolean clear) {
         WebElement element = this.getElement(locator, info);
         sendData(element, data, info, clear);
     }
 
-    public void sendData(WebElement element, String data, String info) {
+    protected void sendData(WebElement element, String data, String info) {
         sendData(element, data, info, true);
     }
 
-    public void sendData(String locator, String data, String info) {
+    protected void sendData(String locator, String data, String info) {
         WebElement element = getElement(locator, info);
         sendData(element, data, info, true);
     }
 
-    public String getText(WebElement element, String info) {
+    protected String getText(WebElement element, String info) {
         log.info("Getting Text on element :: " + info);
         String text = null;
         text = element.getText();
@@ -279,12 +288,12 @@ public class CustomDriver {
         return text.trim();
     }
 
-    public String getText(String locator, String info) {
+    protected String getText(String locator, String info) {
         WebElement element = this.getElement(locator, info);
         return this.getText(element, info);
     }
 
-    public Boolean isEnabled(WebElement element, String info) {
+    protected Boolean isEnabled(WebElement element, String info) {
         Boolean enabled = false;
         if (element != null) {
             enabled = element.isEnabled();
@@ -296,12 +305,12 @@ public class CustomDriver {
         return enabled;
     }
 
-    public Boolean isEnabled(String locator, String info) {
+    protected Boolean isEnabled(String locator, String info) {
         WebElement element = getElement(locator, info);
         return this.isEnabled(element, info);
     }
 
-    public Boolean isDisplayed(WebElement element, String info) {
+    protected Boolean isDisplayed(WebElement element, String info) {
         Boolean displayed = false;
         if (element != null) {
             displayed = element.isDisplayed();
@@ -313,12 +322,12 @@ public class CustomDriver {
         return displayed;
     }
 
-    public Boolean isDisplayed(String locator, String info) {
+    protected Boolean isDisplayed(String locator, String info) {
         WebElement element = getElement(locator, info);
         return this.isDisplayed(element, info);
     }
 
-    public Boolean isSelected(WebElement element, String info) {
+    protected Boolean isSelected(WebElement element, String info) {
         Boolean selected = false;
         if (element != null) {
             selected = element.isSelected();
@@ -330,12 +339,12 @@ public class CustomDriver {
         return selected;
     }
 
-    public Boolean isSelected(String locator, String info) {
+    protected Boolean isSelected(String locator, String info) {
         WebElement element = getElement(locator, info);
         return isSelected(element, info);
     }
 
-    public void Check(WebElement element, String info) {
+    protected void Check(WebElement element, String info) {
         if (!isSelected(element, info)) {
             elementClick(element, info);
             log.info("Element :: " + info + " is checked");
@@ -343,12 +352,12 @@ public class CustomDriver {
             log.info("Element :: " + info + " is already checked");
     }
 
-    public void Check(String locator, String info) {
+    protected void Check(String locator, String info) {
         WebElement element = getElement(locator, info);
         Check(element, info);
     }
 
-    public void UnCheck(WebElement element, String info) {
+    protected void UnCheck(WebElement element, String info) {
         if (isSelected(element, info)) {
             elementClick(element, info);
             log.info("Element :: " + info + " is unchecked");
@@ -356,12 +365,12 @@ public class CustomDriver {
             log.info("Element :: " + info + " is already unchecked");
     }
 
-    public void UnCheck(String locator, String info) {
+    protected void UnCheck(String locator, String info) {
         WebElement element = getElement(locator, info);
         UnCheck(element, info);
     }
 
-    public Boolean Submit(WebElement element, String info) {
+    protected Boolean Submit(WebElement element, String info) {
         if (element != null) {
             element.submit();
             log.info("Element :: " + info + " is submitted");
@@ -370,16 +379,16 @@ public class CustomDriver {
             return false;
     }
 
-    public String getElementAttributeValue(String locator, String attribute) {
+    protected String getElementAttributeValue(String locator, String attribute) {
         WebElement element = getElement(locator, "info");
         return element.getAttribute(attribute);
     }
 
-    public String getElementAttributeValue(WebElement element, String attribute) {
+    protected String getElementAttributeValue(WebElement element, String attribute) {
         return element.getAttribute(attribute);
     }
 
-    public WebElement waitForElement(String locator, int timeout) {
+    protected WebElement waitForElement(String locator, int timeout, String info) {
         By byType = getByType(locator);
         WebElement element = null;
         try {
@@ -388,18 +397,58 @@ public class CustomDriver {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
             element = wait.until(
                     ExpectedConditions.visibilityOfElementLocated(byType));
-            log.info("Element appeared on the web page");
+            log.info(info + " appeared on the web page");
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         } catch (Exception e) {
-            log.error("Element not appeared on the web page");
+            log.error(info + " not appeared on the web page");
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         }
         return element;
     }
 
-    public WebElement waitAndClick(String locator, int timeout, String info) {
+    protected WebElement waitForPresence(String locator, int timeout, String info) {
+        By byType = getByType(locator);
+        WebElement element = null;
+        try {
+            driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+            log.info("Waiting for max:: " + timeout + " seconds for element to be available");
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+            element = wait.until(
+                    ExpectedConditions.presenceOfElementLocated(byType));
+            log.info(info + " appeared on the web page");
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        } catch (Exception e) {
+            log.error(info + " not appeared on the web page");
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        }
+        return element;
+    }
+
+    protected WebElement waitForClickable(String locator, int timeout, String info) {
+        By byType = getByType(locator);
+        WebElement element = null;
+        try {
+            driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+            log.info("Waiting for max:: " + timeout + " seconds for element to be available");
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+            element = wait.until(
+                    ExpectedConditions.elementToBeClickable(byType));
+            log.info(info + " appeared on the web page");
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        } catch (Exception e) {
+            log.error(info + " not appeared on the web page");
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        }
+        return element;
+    }
+
+    protected WebElement waitAndClick(String locator, int timeout, String info) {
         WebElement element = null;
         element = getElement(locator, info);
+        return waitAndClick(element, timeout, info);
+    }
+
+    protected WebElement waitAndClick(WebElement element, int timeout, String info) {
         try {
             driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
             log.info("Waiting for max:: " + timeout + " seconds for element to be clickable " + info);
@@ -419,7 +468,7 @@ public class CustomDriver {
         return element;
     }
 
-    public WebElement waitDisappearAndClick(String disappearanceOflocator, int timeout, String dInfo, String locator, String locatorInfo) {
+    protected WebElement waitDisappearAndClick(String disappearanceOflocator, int timeout, String dInfo, String locator, String locatorInfo) {
         WebElement overlappingElement = null, element = null;
         overlappingElement = getElement(disappearanceOflocator, dInfo);
         element = getElement(locator, locatorInfo);
@@ -444,30 +493,56 @@ public class CustomDriver {
         return element;
     }
 
-    public void mouseHover(String locator, String info) {
+    protected boolean waitForPresenceSecodWin(String info, int timeout) {
+        boolean check = false;
+        try {
+            driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+            log.info("Waiting for max:: " + timeout + " seconds until opening of second window " + info);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+            check = wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+            log.info("Second window is open");
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+            return check;
+        } catch (Exception e) {
+            log.error("Exception occured");
+            log.error(e.getMessage());
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+            return false;
+        }
+
+
+    }
+
+    protected void mouseHover(String locator, String info) {
         WebElement element = getElement(locator, info);
         Actions action = new Actions(driver);
         action.moveToElement(element).perform();
         //Util.sleep(5000);
     }
 
-    public void selectOption(WebElement element, String optionToSelect) {
+    protected void actionClick(String locator, String info) {
+        WebElement element = getElement(locator, info);
+        Actions actions = new Actions(driver);
+        actions.click(element).build().perform();
+    }
+
+    protected void selectOption(WebElement element, String optionToSelect) {
         Select sel = new Select(element);
         sel.selectByVisibleText(optionToSelect);
         log.info("Selected option : " + optionToSelect);
     }
 
-    public void selectOption(String locator, String optionToSelect, String info) {
+    protected void selectOption(String locator, String optionToSelect, String info) {
         WebElement element = getElement(locator, info);
         this.selectOption(element, optionToSelect);
     }
 
-    public String getSelectDropDownValue(WebElement element) {
+    protected String getSelectDropDownValue(WebElement element) {
         Select sel = new Select(element);
         return sel.getFirstSelectedOption().getText();
     }
 
-    public boolean isOptionExists(WebElement element, String optionToVerify) {
+    protected boolean isOptionExists(WebElement element, String optionToVerify) {
         Select sel = new Select(element);
         boolean exists = false;
         List<WebElement> optList = sel.getOptions();
@@ -486,7 +561,7 @@ public class CustomDriver {
         return exists;
     }
 
-    public String takeScreenshot(String methodName, String browserName) {
+    protected String takeScreenshot(String methodName, String browserName) {
         String fileName = Util.getScreenshotName(methodName, browserName);
         String screenshotDir = System.getProperty("user.dir") + "//" + "test-output/screenshots";
         new File(screenshotDir).mkdirs();
@@ -504,14 +579,14 @@ public class CustomDriver {
         return path;
     }
 
-    public void DoubleClick(WebElement element, String info) {
+    protected void DoubleClick(WebElement element, String info) {
         Actions action = new Actions(driver);
         action.doubleClick(element);
         log.info("Double Clicked on :: " + info);
         action.perform();
     }
 
-    public void checkPageLinks(String currentUrl) {
+    protected void checkPageLinks(String currentUrl) {
         List<WebElement> links = null;
         String url = "", linkText = "";
         try {
@@ -534,7 +609,7 @@ public class CustomDriver {
         }
     }
 
-    public void checkResponseCode(String url, String linkText) {
+    protected void checkResponseCode(String url, String linkText) {
         HttpURLConnection huc;
         int responseCode = 200;
         try {
@@ -553,7 +628,7 @@ public class CustomDriver {
         }
     }
 
-    public void getNetworkResponse() {
+    protected void getNetworkResponse() {
         DevTools devTools = ((ChromeDriver) driver).getDevTools();
         devTools.createSession();
         devTools.send(Network.enable(Optional.empty(),
@@ -581,5 +656,31 @@ public class CustomDriver {
             }
         });
 
+    }
+
+    protected void tryclickingForTime(String locator, int timeoout, String info) {
+        WebElement element = getElement(locator, info);
+        long timeoutInSeconds = 10;
+        long pollingIntervalInMilliseconds = 500;
+        long endTime = System.currentTimeMillis() + timeoutInSeconds * 1000;
+
+        while (System.currentTimeMillis() < endTime) {
+            log.info("Trying to click " + info);
+            waitAndClick(element, timeoout, info);
+            log.info("Clicked on " + info);
+
+            boolean check = waitForPresenceSecodWin("Google window", timeoout);
+            if (check) {
+                log.info("New window");
+                break;
+            }
+            try {
+                Thread.sleep(pollingIntervalInMilliseconds);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                log.error("Thread Intercepted");
+                log.error(e.getMessage());
+            }
+        }
     }
 }

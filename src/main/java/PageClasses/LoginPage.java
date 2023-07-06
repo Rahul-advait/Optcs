@@ -6,15 +6,19 @@ import Utilities.Util;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+
 public class LoginPage extends BasePage {
-    private String FORGOT_PASS = "link=>Forgot your password?";
+
     protected WebDriver driver;
+    private String FORGOT_PASS = "link=>Forgot your password?";
+    private String EMAIL_NEXT = "cssSelector=>#identifierNext .VfPpkd-vQzf8d";
     private String EMAIL = "cssSelector=>input#email";
     private String PASSWORD = "cssSelector=>input#password";
     private String REMEMBER_BTN = "cssSelector=>.checkmark";
     private String LOGIN_BTN = "cssSelector=>form .login_btn";
     private String ALERT = "cssSelector=>.Toastify__toast-body div";
-
+    private String GOOGLE_LOGIN_BTN = "cssSelector=>.google_continue.login_btn";
+    private String GOOGLE_IMG = "cssSelector=>img[alt='google']";
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -60,11 +64,10 @@ public class LoginPage extends BasePage {
     }
 
     public boolean isAlertPresent(String expAlertMessage) {
-        WebElement element = waitForElement(ALERT, 20);
+        WebElement element = waitForElement(ALERT, 20, "Alert");
         String alertMessage = element.getAttribute("innerText");
 
-        return isDisplayed(ALERT, "ALERT") ||
-                Util.verifyTextMatch(alertMessage, expAlertMessage);
+        return isDisplayed(ALERT, "ALERT") || Util.verifyTextMatch(alertMessage, expAlertMessage);
     }
 
     public boolean checkAttributes() {
@@ -79,9 +82,15 @@ public class LoginPage extends BasePage {
         return verifyEmail && verifyPass;
     }
 
-
     public ForgotPassword clickForgotPasLink() {
         elementClick(FORGOT_PASS, "forgot password", 10);
         return new ForgotPassword(driver);
     }
+
+    public GoogleSignUP clickGoogleSignUpBtn() {
+        tryclickingForTime(GOOGLE_LOGIN_BTN, 2, "GOOGLE_LOGIN_BTN");
+        log.info("Clicked: " + "Google signup btn");
+        return new GoogleSignUP(driver);
+    }
+
 }

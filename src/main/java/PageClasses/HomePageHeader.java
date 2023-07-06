@@ -23,7 +23,7 @@ public class HomePageHeader extends HomePage {
     public LoginPage clickLoginBtn() {
         WebElement element = null;
         try {
-            element = waitForElement(ALERT, 5);
+            element = waitForElement(ALERT, 3, "Alert");
             log.info("ALERT is present");
             boolean flag = element.isDisplayed();
             log.info(flag);

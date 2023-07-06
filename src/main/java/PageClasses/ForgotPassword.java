@@ -28,7 +28,7 @@ public class ForgotPassword extends BasePage {
     public boolean enterValidEmail() {
         sendData(EMAIL, Constants.VALID_EMAIL, "Valid Email Address");
         elementClick(SUBMIT, "Submit Btn");
-        WebElement element = waitForElement(ALERT, 10);
+        WebElement element = waitForElement(ALERT, 10, "Alert");
         String notification = element.getText();
         System.out.println(notification);
         return Util.verifyTextMatch(notification, SUCCESS_NOTIFICATION);
@@ -37,7 +37,7 @@ public class ForgotPassword extends BasePage {
     public boolean enterInvalidEmail() {
         sendData(EMAIL, Constants.INVALID_EMAIL, "Valid Email Address");
         elementClick(SUBMIT, "Submit Btn");
-        WebElement element = waitForElement(ALERT, 10);
+        WebElement element = waitForElement(ALERT, 10, "Alert");
         String notification = element.getText();
         System.out.println(notification);
         return Util.verifyTextMatch(notification, ERROR_NOTIFICATION);

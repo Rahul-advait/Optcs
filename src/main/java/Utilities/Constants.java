@@ -18,6 +18,9 @@ public class Constants {
     public static final String VALID_PASSWORD = "1@RahulSingh";
     public static final String INVALID_PASSWORD = "Test@123";
     public static final String INVALID_EMAIL = "rahulsingh123123@yopmail.com";
+    public static final String GOOGLE_EMAIL = "pequirebicep@gmail.com";
+    public static final String GOOGLE_PASS ="1@mThestar";
+
 
     public static String getDefaultName() {
         return RandomData.generateRandomName(10);

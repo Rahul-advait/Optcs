@@ -33,6 +33,7 @@ public class CompanyDashRegister extends BaseClassTest {
 
     @Test
     public void validRegistration() {
+        log.info("Starting Valid Registration method");
         registerPage.registerAccount();
         boolean isSuccessPageOpen = registerPage.isRegisterSuccessPage();
         Assert.assertTrue(isSuccessPageOpen);
@@ -40,6 +41,7 @@ public class CompanyDashRegister extends BaseClassTest {
 
     @Test
     public void verifyNameField() {
+        log.info("Starting Verify Name field method");
         registerPage.registerAccountEmptyField("name");
         boolean isSuccessPageOpen = registerPage.isRegisterSuccessPage();
         Assert.assertFalse(isSuccessPageOpen);
@@ -47,6 +49,7 @@ public class CompanyDashRegister extends BaseClassTest {
 
     @Test
     public void verifyEmailField() {
+        log.info("Starting Verify Email field method");
         registerPage.registerAccountEmptyField("email");
         boolean isSuccessPageOpen = registerPage.isRegisterSuccessPage();
         Assert.assertFalse(isSuccessPageOpen);
@@ -54,6 +57,7 @@ public class CompanyDashRegister extends BaseClassTest {
 
     @Test
     public void verifyPasswordField() {
+        log.info("Starting Verify Password Field");
         registerPage.registerAccountEmptyField("password");
         boolean isSuccessPageOpen = registerPage.isRegisterSuccessPage();
         Assert.assertFalse(isSuccessPageOpen);
@@ -61,6 +65,7 @@ public class CompanyDashRegister extends BaseClassTest {
 
     @Test
     public void verifyConfirmPasswordField() {
+        log.info("Starting Verify confirm password field");
         registerPage.registerAccountEmptyField("confirm password");
         boolean isSuccessPageOpen = registerPage.isRegisterSuccessPage();
         Assert.assertFalse(isSuccessPageOpen);
@@ -68,6 +73,7 @@ public class CompanyDashRegister extends BaseClassTest {
 
     @Test
     public void verifyCompanyNameField() {
+        log.info("Starting Verify Company Name method");
         registerPage.registerAccountEmptyField("company name");
         boolean isSuccessPageOpen = registerPage.isRegisterSuccessPage();
         Assert.assertFalse(isSuccessPageOpen);
@@ -75,6 +81,7 @@ public class CompanyDashRegister extends BaseClassTest {
 
     @Test
     public void verifyWorkEmailField() {
+        log.info("Starting Work Email method");
         registerPage.registerAccountEmptyField("work email");
         boolean isSuccessPageOpen = registerPage.isRegisterSuccessPage();
         Assert.assertFalse(isSuccessPageOpen);
@@ -82,6 +89,7 @@ public class CompanyDashRegister extends BaseClassTest {
 
     @Test
     public void verifyTotalEmpField() {
+        log.info("Starting Verify Total Employee field");
         registerPage.registerAccountEmptyField("total emp");
         boolean isSuccessPageOpen = registerPage.isRegisterSuccessPage();
         Assert.assertFalse(isSuccessPageOpen);
@@ -89,6 +97,7 @@ public class CompanyDashRegister extends BaseClassTest {
 
     @Test
     public void verifyDomainField() {
+        log.info("Starting Verify domain field method");
         registerPage.registerAccountEmptyField("company domain");
         boolean isSuccessPageOpen = registerPage.isRegisterSuccessPage();
         Assert.assertFalse(isSuccessPageOpen);
@@ -96,6 +105,7 @@ public class CompanyDashRegister extends BaseClassTest {
 
     @Test
     public void verifyUsernameField() {
+        log.info("Starting Verify Username field method");
         registerPage.registerAccountEmptyField("username");
         boolean isSuccessPageOpen = registerPage.isRegisterSuccessPage();
         Assert.assertFalse(isSuccessPageOpen);
